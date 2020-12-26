@@ -1,6 +1,6 @@
 <template>
   <v-card min-height="300px" class="key-visual">
-    <v-container>
+    <v-container class="pa-16">
       <!-- 名前 -->
       <div>
         <name></name>

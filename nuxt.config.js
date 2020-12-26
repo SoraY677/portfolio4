@@ -48,6 +48,7 @@ module.exports = {
    */
   buildModules: [
     '@nuxtjs/vuetify',
+    'nuxt-animejs'
   ],
   /*
    ** Nuxt.js modules
