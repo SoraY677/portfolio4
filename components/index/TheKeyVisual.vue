@@ -31,7 +31,7 @@ export default {
     LinkList,
   },
   props: {
-    linkList: [],
+    linkList: Array,
   },
 };
 </script>

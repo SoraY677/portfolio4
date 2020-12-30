@@ -11,7 +11,7 @@
 <script>
 export default {
   props: {
-    linkList: [],
+    linkList: Array,
   },
 };
 </script>
