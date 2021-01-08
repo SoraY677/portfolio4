@@ -7,6 +7,9 @@ module.exports = {
    */
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
+    htmlAttrs: {
+      lang: 'ja'
+    },
     title: process.env.npm_package_name || '',
     meta: [{
         charset: 'utf-8'
