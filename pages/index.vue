@@ -1,7 +1,7 @@
 <template>
   <section>
     <key-visual :linkList="linkList" class="mb-12"></key-visual>
-    <intro :introText="introText" class="px-10"></intro>
+    <intro :introText="introText" class="px-12"></intro>
   </section>
 </template>
 
@@ -32,7 +32,12 @@ export default {
           path: "/link/qiita.svg",
         },
       ],
-      introText: "とりあえずてすとな",
+      introText: [
+        "こんにちは。ワタシはヤマグチソラです",
+        "宇宙生まれ地球育ち。",
+        "ギークなやつは大体トモダチ。",
+        "人間で言うと22サイのオトコノコ",
+      ],
     };
   },
 };

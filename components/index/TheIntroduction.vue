@@ -2,7 +2,11 @@
   <v-container class="d-flex justify-space-around">
     <img src="alien.svg" class="icon" />
     <div class="text-container">
-      <p class="pa-3">{{ introText }}</p>
+      <div class="pa-3">
+        <p v-for="text in introText" :key="text.id">
+          {{ text }}
+        </p>
+      </div>
     </div>
   </v-container>
 </template>
@@ -10,7 +14,7 @@
 <script>
 export default {
   props: {
-    introText: "",
+    introText: Array,
   },
 };
 </script>
@@ -24,5 +28,6 @@ export default {
   width: 68%;
   border: 4px solid var(--main-color);
   border-radius: 1em;
+  font-size: 1.2em;
 }
 </style>
