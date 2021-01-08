@@ -3,7 +3,11 @@
     <img src="alien.svg" class="icon" />
     <div class="text-container">
       <div class="pa-3">
-        <p v-for="text in introText" :key="text.id">
+        <p
+          v-for="text in introText"
+          :key="text.id"
+          class="text-body-1 text-sm-h6"
+        >
           {{ text }}
         </p>
       </div>
@@ -28,6 +32,5 @@ export default {
   width: 68%;
   border: 4px solid var(--main-color);
   border-radius: 1em;
-  font-size: 1.2em;
 }
 </style>

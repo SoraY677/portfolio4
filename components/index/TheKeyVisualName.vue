@@ -12,7 +12,8 @@ export default {};
 <style scoped>
 .kv-title {
   padding-left: 0.6em;
-  font-size: 4em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   color: var(--bg-color);
   border-left: 3px solid var(--bg-color);
 }

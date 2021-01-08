@@ -1,8 +1,8 @@
 <template>
   <section>
     <key-visual :linkList="linkList" class="mb-12"></key-visual>
-    <intro :introText="introText" class="px-12"></intro>
-    <skill class="px-15 mx-sm-10"></skill>
+    <intro :introText="introText" class="px-12 mb-12"></intro>
+    <skill class="px-16 l-skill"></skill>
   </section>
 </template>
 
@@ -47,4 +47,8 @@ export default {
 </script>
 
 <style scoped>
+.l-skill {
+  max-width: 640px;
+  margin: auto;
+}
 </style>

@@ -29,7 +29,7 @@ export default {};
 }
 
 .hand-img {
-  height: 40%;
+  width: 2em;
   margin-top: 10%;
 }
 </style>
