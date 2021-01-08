@@ -27,7 +27,12 @@
           :class="{ 'rect-block': !$vuetify.breakpoint.smAndUp }"
           v-else
         >
-          <img :src="skill.path" :alt="skill.altName" />
+          <img
+            :src="skill.path"
+            :alt="skill.altName"
+            width="120"
+            height="120"
+          />
           <div class="text">
             <p class="mt-2 mb-0">{{ skill.name }}</p>
           </div>
@@ -58,6 +63,7 @@ export default {
   width: 100%;
   height: 100%;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -74,6 +80,7 @@ export default {
 }
 
 img {
+  width: 100%;
   height: 50%;
 }
 

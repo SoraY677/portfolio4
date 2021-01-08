@@ -1,6 +1,6 @@
 <template>
   <v-container class="d-flex justify-space-around align-center">
-    <img src="alien.svg" class="icon" alt="宇宙人の頭" />
+    <img src="alien.svg" class="icon" alt="宇宙人の頭" height="90" width="90" />
     <div class="text-container">
       <div class="pa-3">
         <p

@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 .l-skill {
-  max-width: 640px;
+  max-width: 800px;
   margin: auto;
 }
 </style>
