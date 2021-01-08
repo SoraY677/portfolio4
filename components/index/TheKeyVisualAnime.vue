@@ -23,9 +23,11 @@ export default {};
 
 <style scoped>
 .m-container {
+  height: 140px;
 }
 .pirot-img {
   width: 5em;
+  height: 100%;
 }
 
 .hand-img {

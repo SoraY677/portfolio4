@@ -1,8 +1,8 @@
 <template>
   <section>
     <key-visual :linkList="linkList" class="mb-12"></key-visual>
-    <intro :introText="introText" class="px-12 mb-12"></intro>
-    <skill class="px-16 l-skill" :skillList="skillList"></skill>
+    <intro :introText="introText" class="px-2 mb-12"></intro>
+    <skill class="px-16 l-skill mb-12" :skillList="skillList"></skill>
   </section>
 </template>
 
