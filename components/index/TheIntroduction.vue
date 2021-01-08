@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex justify-space-around">
+  <v-container class="d-flex justify-space-around align-center">
     <img src="alien.svg" class="icon" alt="宇宙人の頭" />
     <div class="text-container">
       <div class="pa-3">
@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .icon {
   width: 20%;
-  height: auto;
+  height: 120px;
 }
 
 .text-container {
