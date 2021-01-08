@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .link-container {
-  max-height: 120px;
+  max-height: 50px;
 }
 
 li {

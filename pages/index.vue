@@ -2,7 +2,7 @@
   <section>
     <key-visual :linkList="linkList" class="mb-12"></key-visual>
     <intro :introText="introText" class="px-12 mb-12"></intro>
-    <skill class="px-16 l-skill"></skill>
+    <skill class="px-16 l-skill" :skillList="skillList"></skill>
   </section>
 </template>
 
@@ -40,6 +40,28 @@ export default {
         "宇宙生まれ地球育ち。",
         "ギークなやつは大体トモダチ。",
         "人間で言うと22サイのオトコノコ",
+      ],
+      skillList: [
+        {
+          name: "フロントエンド",
+          path: "/frontend.svg",
+          altName: "フロントエンド",
+        },
+        {
+          name: "AI",
+          path: "/AI.svg",
+          altName: "AI",
+        },
+        {
+          name: "ツール",
+          path: "/tool.svg",
+          altName: "ツール",
+        },
+        {
+          name: "バックエンド",
+          path: "/backend.svg",
+          altName: "バックエンド",
+        },
       ],
     };
   },

@@ -27,9 +27,9 @@
           :class="{ 'rect-block': !$vuetify.breakpoint.smAndUp }"
           v-else
         >
-          <img src="/frontend.svg" />
+          <img :src="skill.path" :alt="skill.altName" />
           <div class="text">
-            <p>フロントエンド</p>
+            <p class="mt-2 mb-0">{{ skill.name }}</p>
           </div>
         </div>
       </div>
@@ -42,6 +42,7 @@ export default {
   props: {
     isText: false,
     text: Array,
+    skill: Object,
   },
 };
 </script>
