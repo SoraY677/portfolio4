@@ -23,16 +23,19 @@ export default {
           name: "twitter",
           url: "https://twitter.com/TenYDGB",
           path: "/link/twitter.svg",
+          altName: "Twitterアイコン",
         },
         {
           name: "Github",
           url: "https://github.com/SoraY677",
           path: "/link/github.svg",
+          altName: "Githubアイコン",
         },
         {
           name: "Qiita",
           url: "https://qiita.com/SoraYamaguchi",
           path: "/link/qiita.svg",
+          altName: "Qiitaアイコン",
         },
       ],
       introText: [
