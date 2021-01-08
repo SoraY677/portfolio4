@@ -10,7 +10,7 @@
         <anime class="pirot"></anime>
       </div>
     </div>
-    <v-row justify="end" class="ornament px-5">
+    <v-row class="ornament px-5 justify-end">
       <v-col cols="12" sm="4" class="pa-0 d-flex justify-center"
         ><div class="circle-block">
           <span class="d-block pb-1">scroll</span>

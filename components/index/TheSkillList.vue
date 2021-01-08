@@ -5,7 +5,7 @@
       :class="{ 'outer-line': !$vuetify.breakpoint.smAndUp }"
       class="pa-3 text-h2 text-sm-h5"
     >
-      <v-row justify="center " class="my-0">
+      <v-row class="justify-center my-0">
         <v-col cols="12" sm="4"
           ><skill-circle :skill="skillList[0]"></skill-circle
         ></v-col>
@@ -24,7 +24,7 @@
           ><skill-circle :skill="skillList[2]"></skill-circle
         ></v-col>
       </v-row>
-      <v-row justify="center" class="my-0">
+      <v-row class="my-0 justify-center">
         <v-col cols="12" sm="4"
           ><skill-circle :skill="skillList[3]"></skill-circle
         ></v-col>
