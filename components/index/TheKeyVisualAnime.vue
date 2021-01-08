@@ -23,10 +23,9 @@ export default {};
 
 <style scoped>
 .m-container {
-  height: 200px;
 }
 .pirot-img {
-  height: 100%;
+  width: 5em;
 }
 
 .hand-img {

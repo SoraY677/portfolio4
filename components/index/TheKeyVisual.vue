@@ -1,6 +1,6 @@
 <template>
   <v-card class="key-visual" min-height="300px" elevation="0">
-    <div class="pa-16 key-visual-inner">
+    <div class="pa-3 pa-sm-16 key-visual-inner text-h5 text-sm-h2">
       <!-- 名前 -->
       <div>
         <name></name>
@@ -10,13 +10,16 @@
         <anime class="pirot"></anime>
       </div>
     </div>
-    <div class="key-visual-ornament">
-      <link-list :linkList="linkList" class="link-list mt-5"></link-list>
-      <div class="circle-block">
-        <span class="d-block pb-1">scroll</span>
-        <p class="scroll-arrow"></p>
-      </div>
-    </div>
+    <v-row justify="end" class="ornament">
+      <v-col cols="12" sm="4" class="pa-0 d-flex justify-center"
+        ><div class="circle-block">
+          <span class="d-block pb-1">scroll</span>
+          <p class="scroll-arrow"></p></div
+      ></v-col>
+      <v-col cols="12" sm="4" class="pa-0"
+        ><link-list :linkList="linkList" class="link-list mt-5"></link-list
+      ></v-col>
+    </v-row>
   </v-card>
 </template>
 
@@ -51,9 +54,8 @@ export default {
   margin: 0;
 }
 
-.key-visual-ornament {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.ornament {
+  width: 100%;
 }
 
 .circle-block {
@@ -77,11 +79,5 @@ export default {
   border-bottom: 2px solid var(--bg-color);
   margin: 0;
   transform: skewY(-45deg) translateX(50%);
-}
-
-.link-list {
-  height: 2.5em;
-  padding-left: 2em;
-  padding-right: 2em;
 }
 </style>
