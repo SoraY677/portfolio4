@@ -11,6 +11,14 @@
   margin: 0;
 }
 
+.text-main-color {
+  color: var(--main-color);
+}
+
+.text-bg-color {
+  color: var(--bg-color);
+}
+
 /* ------------------------------------
 円の設定
 ------------------------------------ */
