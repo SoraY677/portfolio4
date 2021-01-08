@@ -2,16 +2,19 @@
   <section>
     <key-visual :linkList="linkList" class="mb-12"></key-visual>
     <intro :introText="introText" class="px-12"></intro>
+    <skill class="px-15 mx-sm-10"></skill>
   </section>
 </template>
 
 <script>
 import KeyVisual from "@/components/index/TheKeyVisual.vue";
 import Intro from "@/components/index/TheIntroduction.vue";
+import Skill from "@/components/index/TheSkillList.vue";
 export default {
   components: {
     KeyVisual,
     Intro,
+    Skill,
   },
   data() {
     return {
