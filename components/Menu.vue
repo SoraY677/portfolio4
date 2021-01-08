@@ -18,9 +18,9 @@
             class="wh-full d-flex justify-center align-center flex-wrap pa-10"
           >
             <v-list-item v-for="item in linkpath" :key="item.id" class="">
-              <nuxt-link :to="item.path" class="link-item d-block">{{
+              <a class="link-item d-block" @click="test(item.path)">{{
                 item.name
-              }}</nuxt-link>
+              }}</a>
             </v-list-item>
           </v-list>
         </div>
@@ -49,10 +49,17 @@ export default {
         },
         {
           name: "トップページ",
-          path: "/",
+          path: "/re",
         },
       ],
     };
+  },
+  methods: {
+    test(toPath) {
+      if (this.$route.path == toPath) this.drawer = false;
+      else this.$router.push(toPath);
+      console.log(this.$route.path);
+    },
   },
 };
 </script>
