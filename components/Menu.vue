@@ -1,11 +1,17 @@
 <template>
   <nav>
-    <v-button @click.stop="drawer = !drawer" class="menu-trigger">
+    <a @click.stop="drawer = !drawer" class="menu-trigger">
       <div class="menu-trigger-inner">
-        <img src="/moon.svg" height="30px" width="30px" class="menu-icon" />
+        <img
+          src="/moon.svg"
+          height="30px"
+          width="30px"
+          class="menu-icon"
+          alt="月のメニューアイコン"
+        />
         <p class="menu-supplement mb-0 text-center">menu</p>
       </div>
-    </v-button>
+    </a>
 
     <v-navigation-drawer
       v-model="drawer"
@@ -16,18 +22,20 @@
       class="menu-container"
     >
       <v-container class="pa-10 panel-full menu-content">
-        <h1 class="text-bg-color text-center text-h2">Menu</h1>
-        <div class="list-container">
-          <v-list
-            class="wh-full d-flex justify-center align-center flex-wrap pa-10"
-          >
-            <v-list-item v-for="item in linkpath" :key="item.id" class="">
-              <a class="link-item d-block" @click="test(item.path)">{{
-                item.name
-              }}</a>
-            </v-list-item>
-          </v-list>
-        </div>
+        <section class="flex justify-center align-center">
+          <h1 class="text-bg-color text-center text-h2">Menu</h1>
+          <div class="list-container">
+            <v-list
+              class="wh-full d-flex justify-center align-center flex-wrap pa-10"
+            >
+              <v-list-item v-for="item in linkpath" :key="item.id" class="">
+                <a class="link-item d-block" @click="test(item.path)">{{
+                  item.name
+                }}</a>
+              </v-list-item>
+            </v-list>
+          </div>
+        </section>
       </v-container>
     </v-navigation-drawer>
   </nav>
@@ -73,10 +81,10 @@ export default {
   position: fixed;
   display: flex;
   z-index: 201;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
   padding: 2px;
-  border-radius: 0 0 10px 0;
+  border-radius: 0 0 0 10px;
   justify-content: center;
   align-items: center;
   background-color: var(--main-color);
@@ -95,13 +103,13 @@ export default {
 }
 
 .menu-icon {
-  height: 2em !important;
-  width: 2em !important;
+  height: 3em !important;
+  width: 3em !important;
   transition-duration: 0.3s;
 }
 .menu-supplement {
   color: var(--bg-color);
-  font-size: 0.4em;
+  font-size: 0.9em;
 }
 
 .menu-container {
@@ -109,7 +117,10 @@ export default {
 }
 
 .menu-content {
+  display: flex;
   background-color: var(--main-color);
+  justify-content: center;
+  align-items: center;
 }
 
 .panel-full {
@@ -124,6 +135,7 @@ export default {
 
 .list-container {
   border: 3px solid var(--bg-color);
+  border-radius: 30px;
 }
 
 .link-item {
