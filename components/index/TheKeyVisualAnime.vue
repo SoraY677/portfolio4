@@ -1,8 +1,9 @@
 <template>
   <v-container class="d-flex m-container">
-    <img src="/pirot.svg" class="pirot-img" />
+    <img src="/pirot.svg" alt="宇宙飛行士" class="pirot-img" />
     <img
       src="/hand.svg"
+      alt="宇宙飛行士の手"
       class="hand-img"
       v-anime="{
         rotate: {
