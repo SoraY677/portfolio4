@@ -1,6 +1,5 @@
 <template>
   <section>
-    <my-header class="mb-16 mb-sm-15"></my-header>
     <work-list :workList="workList"></work-list>
   </section>
 </template>

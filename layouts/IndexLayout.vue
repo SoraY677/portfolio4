@@ -1,19 +1,20 @@
 <template>
-  <section>
-    <my-form class="mx-5"></my-form>
-  </section>
+  <v-app>
+    <l-menu></l-menu>
+    <nuxt></nuxt>
+  </v-app>
 </template>
 
 <script>
 import MyHeader from "@/components/TheHeader.vue";
-import MyForm from "@/components/contact/TheForm.vue";
+import LMenu from "~/layouts/Menu.vue";
 export default {
   components: {
     MyHeader,
-    MyForm,
+    LMenu,
   },
 };
 </script>
 
-<style scoped>
+<style>
 </style>

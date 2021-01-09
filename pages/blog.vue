@@ -1,7 +1,14 @@
-<template></template>
+<template>
+  <section></section>
+</template>
 
 <script>
-export default {};
+import MyHeader from "@/components/TheHeader.vue";
+export default {
+  components: {
+    MyHeader,
+  },
+};
 </script>
 
 <style scoped>
