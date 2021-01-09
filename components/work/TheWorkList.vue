@@ -38,7 +38,7 @@ ul {
 }
 
 li {
-  height: 340px;
+  height: 360px;
   list-style: none;
 }
 </style>
