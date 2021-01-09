@@ -11,6 +11,7 @@ import KeyVisual from "@/components/index/TheKeyVisual.vue";
 import Intro from "@/components/index/TheIntroduction.vue";
 import Skill from "@/components/index/TheSkillList.vue";
 export default {
+  layout: "IndexLayout",
   components: {
     KeyVisual,
     Intro,

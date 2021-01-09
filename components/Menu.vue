@@ -48,20 +48,20 @@ export default {
       drawer: false,
       linkpath: [
         {
-          name: "トップページ",
+          name: "Top",
           path: "/",
         },
         {
-          name: "ほげ",
-          path: "/",
+          name: "Blog",
+          path: "/blog",
         },
         {
-          name: "ふが",
-          path: "/",
+          name: "Work",
+          path: "/work",
         },
         {
-          name: "トップページ",
-          path: "/re",
+          name: "Contact",
+          path: "/contact",
         },
       ],
     };
@@ -70,7 +70,6 @@ export default {
     test(toPath) {
       if (this.$route.path == toPath) this.drawer = false;
       else this.$router.push(toPath);
-      console.log(this.$route.path);
     },
   },
 };
@@ -124,8 +123,11 @@ export default {
 }
 
 .panel-full {
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
 }
 
 .wh-full {

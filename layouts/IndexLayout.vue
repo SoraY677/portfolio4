@@ -1,8 +1,7 @@
 <template>
   <v-app>
     <l-menu></l-menu>
-    <my-header class="mb-16"></my-header>
-    <nuxt class="n-content"></nuxt>
+    <nuxt></nuxt>
     <my-footer class="mt-16"></my-footer>
   </v-app>
 </template>
@@ -21,7 +20,4 @@ export default {
 </script>
 
 <style>
-.n-content {
-  min-height: 60vh;
-}
 </style>

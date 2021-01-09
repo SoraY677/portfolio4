@@ -1,44 +1,75 @@
 <template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
+  <section>
+    <div class="circle-outer">
+      <square-block :isCircle="true" class="square-cover">
+        <div class="circle-inner d-flex justify-center align-start"></div>
+      </square-block>
+      <div class="bottom-block">
+        <div class="text-container mt-4">
+          <h1 class="text-center mb-6">404 not Found</h1>
+          <div class="text-center">
+            <p>お探しのページは見つかりませんデシタ。</p>
+            <p>ページのURLがマチガッテイル可能性がありマス。</p>
+            <nuxt-link to="/"
+              >お手数ですが、トップページへお戻りクダサイ。</nuxt-link
+            >
+          </div>
+        </div>
+        <footer>
+          <p class="text-center">© 2020 Sora Yamaguchi All Rights Reserved</p>
+        </footer>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import SquareBlock from "@/components/BaseModule/SquareBlock";
 export default {
-  layout: 'empty',
-  props: {
-    error: {
-      type: Object,
-      default: null
-    }
+  layout: "ErrorLayout",
+  components: {
+    SquareBlock,
   },
-  head () {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
-    return {
-      title
-    }
-  },
-  data () {
-    return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
-    }
-  }
-}
+};
 </script>
 
 <style scoped>
-h1 {
-  font-size: 20px;
+.circle-outer {
+  width: 300%;
+}
+
+.square-cover {
+  position: absolute;
+  width: 200%;
+  top: 20%;
+  left: -50%;
+}
+
+.circle-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.bottom-block {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 30%;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-color);
+}
+
+.text-container {
+  width: 100vw;
+  color: var(--bg-color);
+}
+
+footer {
+  color: var(--bg-color);
+  width: 100%;
 }
 </style>

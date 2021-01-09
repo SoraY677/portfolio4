@@ -3,12 +3,12 @@
     <div
       class="base"
       :class="{
-        'common-circle': $vuetify.breakpoint.smAndUp,
+        'common-square circle': $vuetify.breakpoint.smAndUp,
       }"
     >
       <div
         :class="{
-          'common-circle-inner': $vuetify.breakpoint.smAndUp,
+          'common-square-inner': $vuetify.breakpoint.smAndUp,
         }"
       >
         <!-- テキスト -->

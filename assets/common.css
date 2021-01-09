@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 :root {
   --main-color: #2d2d40;
   --sub-color-1: #4f4f73;
@@ -11,6 +11,20 @@
   margin: 0;
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+}
+
+ul {
+  list-style: none;
+}
+
+.text-title-font {
+  font-family: 'Kanit', sans-serif !important;
+}
+
 .text-main-color {
   color: var(--main-color);
 }
@@ -20,18 +34,22 @@
 }
 
 /* ------------------------------------
-円の設定
+正方形
 ------------------------------------ */
 
-.common-circle {
+.common-square {
   position: relative;
   width: 100%;
   height: 0;
   padding-top: 100%;
+  overflow: hidden;
+}
+
+.common-square.circle {
   border-radius: 50%;
 }
 
-.common-circle>.common-circle-inner {
+.common-square-inner {
   position: absolute;
   display: flex;
   top: 0;
