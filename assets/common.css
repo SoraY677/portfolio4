@@ -31,3 +31,30 @@ ul {
 .text-bg-color {
   color: var(--bg-color);
 }
+
+/* ------------------------------------
+正方形
+------------------------------------ */
+
+.common-square {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.common-square.circle {
+  border-radius: 50%;
+}
+
+.common-square-inner {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
