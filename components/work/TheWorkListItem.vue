@@ -21,8 +21,20 @@
         </p>
       </div>
     </div>
-    <a :href="work.link.path" class="img-container ml-5">
+    <a
+      :href="work.link.path"
+      class="img-container ml-5"
+      v-if="work.link.path != ''"
+    >
       <div class="img-cover">{{ work.link.name }}(外部リンク)</div>
+      <img
+        :src="work.img.path"
+        :alt="work.img.altName"
+        width="640"
+        height="300"
+      />
+    </a>
+    <a v-else class="img-container ml-5">
       <img
         :src="work.img.path"
         :alt="work.img.altName"
@@ -47,7 +59,9 @@ export default {
   height: 100%;
   justify-content: space-between;
   overflow-x: scroll;
+  overflow-y: hidden;
   border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
 }
 
 .detail-container {
