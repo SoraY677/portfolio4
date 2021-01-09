@@ -1,5 +1,5 @@
 <template>
-  <form class="pa-5 pa-sm-10">
+  <v-form class="pa-5 pa-sm-10" ref="form">
     <v-text-field
       label="name"
       class="input-block mb-5"
@@ -20,11 +20,7 @@
       v-model="content"
     ></v-textarea>
     <div class="d-flex justify-center button-container">
-      <v-btn
-        type="button"
-        class="pa-10 text-sm-h1 text-h3"
-        @click="isConfirmOpen = !isConfirmOpen"
-      >
+      <v-btn type="button" class="pa-10 text-sm-h1 text-h3" @click="openModal">
         submit
         <img src="/rocket.svg" height="18" width="18" alt="ロケットの画像" />
       </v-btn>
@@ -37,8 +33,9 @@
       }"
       :isOpen="isConfirmOpen"
       @change="changeConfirmModal"
+      @confirm="reset"
     ></confirm-modal>
-  </form>
+  </v-form>
 </template>
 
 <script>
@@ -62,6 +59,13 @@ export default {
     };
   },
   methods: {
+    reset() {
+      this.$refs.form.reset();
+    },
+    openModal() {
+      const validate = this.$refs.form.validate();
+      if (validate == true) this.isConfirmOpen = true;
+    },
     changeConfirmModal(isOpen) {
       this.isConfirmOpen = isOpen;
     },
