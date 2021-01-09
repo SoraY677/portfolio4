@@ -23,7 +23,12 @@
     </div>
     <a :href="work.link.path" class="img-container ml-5">
       <div class="img-cover">{{ work.link.name }}(外部リンク)</div>
-      <img :src="work.img.path" :alt="work.img.altName" />
+      <img
+        :src="work.img.path"
+        :alt="work.img.altName"
+        width="640"
+        height="300"
+      />
     </a>
   </section>
 </template>
