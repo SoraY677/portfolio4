@@ -48,20 +48,20 @@ export default {
       drawer: false,
       linkpath: [
         {
-          name: "トップページ",
+          name: "Top",
           path: "/",
         },
         {
-          name: "ほげ",
-          path: "/",
+          name: "Blog",
+          path: "/blog",
         },
         {
-          name: "ふが",
-          path: "/",
+          name: "Work",
+          path: "/work",
         },
         {
-          name: "トップページ",
-          path: "/re",
+          name: "Contact",
+          path: "/contact",
         },
       ],
     };
@@ -124,8 +124,11 @@ export default {
 }
 
 .panel-full {
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
 }
 
 .wh-full {
