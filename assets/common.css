@@ -16,6 +16,10 @@ body {
   overflow: hidden;
 }
 
+ul {
+  list-style: none;
+}
+
 .text-title-font {
   font-family: 'Kanit', sans-serif !important;
 }
