@@ -25,6 +25,7 @@ export default {
 <style scoped>
 .work-list-container {
   border-top: 2em solid var(--main-color);
+  border-bottom: 2em solid var(--main-color);
 }
 
 .left-side {
