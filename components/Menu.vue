@@ -70,7 +70,6 @@ export default {
     test(toPath) {
       if (this.$route.path == toPath) this.drawer = false;
       else this.$router.push(toPath);
-      console.log(this.$route.path);
     },
   },
 };
