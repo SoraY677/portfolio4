@@ -64,8 +64,8 @@ export default {
   display: block;
   height: 100%;
 }
-
-h1 {
+.text-container {
+  word-break: break-word;
 }
 
 .img-cover {
