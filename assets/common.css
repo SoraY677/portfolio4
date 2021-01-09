@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 :root {
   --main-color: #2d2d40;
   --sub-color-1: #4f4f73;
@@ -11,33 +11,19 @@
   margin: 0;
 }
 
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.text-title-font {
+  font-family: 'Kanit', sans-serif !important;
+}
+
 .text-main-color {
   color: var(--main-color);
 }
 
 .text-bg-color {
   color: var(--bg-color);
-}
-
-/* ------------------------------------
-円の設定
------------------------------------- */
-
-.common-circle {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 100%;
-  border-radius: 50%;
-}
-
-.common-circle>.common-circle-inner {
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
 }
