@@ -30,24 +30,6 @@ export default {
             path: "https://soray677-portfolio.netlify.app",
           },
         },
-        {
-          title: "Portfolio",
-          category: "フロントエンド",
-          tagList: ["Vue.js", "Nuxt.js", "Vuetify", "anime.js"],
-          detail: [
-            "Nuxt.jsの勉強も兼ねて制作し他Webサイトです。",
-            "自身の名前が宇宙に由来することから、どうにか名前を憶えてほしくて宇宙をコンセプトにしました！",
-            "私の特技や制作した作品を掲載していくので、このサイトを機に私のことを知っていただければ幸いです。",
-          ],
-          img: {
-            path: "/work/portfolio.jpg",
-            altName: "ポートフォリオ画像",
-          },
-          link: {
-            name: "ホームページ",
-            path: "https://soray677-portfolio.netlify.app",
-          },
-        },
       ],
     };
   },
