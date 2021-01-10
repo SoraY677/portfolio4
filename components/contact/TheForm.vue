@@ -20,9 +20,20 @@
       v-model="content"
     ></v-textarea>
     <div class="d-flex justify-center button-container">
-      <v-btn type="button" class="pa-10 text-sm-h1 text-h3" @click="openModal">
+      <v-btn
+        type="button"
+        class="pa-10 text-sm-h1 text-h3"
+        @click="openModal"
+        id="submitBtn"
+      >
         submit
-        <img src="/rocket.svg" height="18" width="18" alt="ロケットの画像" />
+        <img
+          src="/rocket.svg"
+          class="d-inline-block rocket1"
+          height="18"
+          width="18"
+          alt="ロケットの画像"
+        />
       </v-btn>
     </div>
     <confirm-modal
@@ -73,6 +84,27 @@ export default {
 
   components: {
     ConfirmModal,
+  },
+  mounted() {
+    let anime1 = null;
+    //マウスオーバーで飛行機がふわふわするアニメーション
+    const animeTarget = document.getElementById("submitBtn"); //this.$refs.submitBtn;
+    animeTarget.addEventListener("mouseenter", () => {
+      anime1 = this.$anime({
+        targets: ".rocket1",
+        translateX: [-2, 0, 2],
+        translateY: [0, -5, 5],
+        rotate: [-30, 30],
+        loop: true,
+        easing: "linear",
+        direction: "alternate",
+        duration: 2000,
+      });
+    });
+
+    animeTarget.addEventListener("mouseleave", () => {
+      anime1.pause();
+    });
   },
 };
 </script>
