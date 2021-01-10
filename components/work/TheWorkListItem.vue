@@ -1,5 +1,10 @@
 <template>
-  <section class="work-container">
+  <section
+    class="work-container"
+    ref="item"
+    onMouseDown="return false;"
+    onSelectStart="return false"
+  >
     <div class="detail-container pa-4">
       <div>
         <div class="d-flex title align-center pb-2">
@@ -21,27 +26,14 @@
         </p>
       </div>
     </div>
-    <a
-      :href="work.link.path"
-      class="img-container ml-5"
-      v-if="work.link.path != ''"
-    >
-      <div class="img-cover">{{ work.link.name }}(外部リンク)</div>
+    <div class="img-container ml-5">
       <img
         :src="work.img.path"
         :alt="work.img.altName"
         width="640"
         height="300"
       />
-    </a>
-    <a v-else class="img-container ml-5">
-      <img
-        :src="work.img.path"
-        :alt="work.img.altName"
-        width="640"
-        height="300"
-      />
-    </a>
+    </div>
   </section>
 </template>
 
@@ -49,6 +41,33 @@
 export default {
   props: {
     work: Object,
+    isSwipe: false,
+  },
+  mounted() {
+    const DOM = this.$refs.item;
+    let previousX = 0;
+    let currentX = 0;
+    DOM.addEventListener("mousedown", function (e) {
+      this.isSwipe = true;
+      previousX = e.clientX;
+    });
+    DOM.addEventListener("mousemove", function (e) {
+      if (this.isSwipe == true) {
+        currentX = e.clientX;
+        DOM.scrollBy(-(currentX - previousX), 0);
+        previousX = currentX;
+      }
+    });
+    DOM.addEventListener("mouseup", function (e) {
+      this.isSwipe = false;
+      previousX = 0;
+      currentX = 0;
+    });
+    DOM.addEventListener("mouseout", function (e) {
+      this.isSwipe = false;
+      previousX = 0;
+      currentX = 0;
+    });
   },
 };
 </script>
@@ -62,6 +81,11 @@ export default {
   overflow-y: hidden;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .detail-container {
