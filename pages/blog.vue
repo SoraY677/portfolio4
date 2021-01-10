@@ -13,12 +13,7 @@
 </template>
 
 <script>
-import MyHeader from "@/components/TheHeader.vue";
-export default {
-  components: {
-    MyHeader,
-  },
-};
+export default {};
 </script>
 
 <style scoped>
