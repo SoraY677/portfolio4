@@ -10,6 +10,8 @@ export default {};
 
 <style scoped>
 .common-link-outer {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -17,12 +19,10 @@ export default {};
   position: relative;
   z-index: 100;
   display: block;
-  width: 60%;
   padding: 0.2em;
   font-size: 2em;
   border-radius: 1em;
   color: var(--main-color);
-  border: 2px solid var(--main-color);
   text-decoration: none;
   text-align: center;
   font-weight: bold;
