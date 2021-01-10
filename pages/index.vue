@@ -3,16 +3,26 @@
     <key-visual :linkList="linkList" class="mb-12"></key-visual>
     <intro :introText="introText" class="px-2 mb-12"></intro>
     <skill class="px-16 l-skill mb-12" :skillList="skillList"></skill>
+    <section>
+      <heading class="mb-8">ご連絡、ヨロシクネ！</heading>
+      <c-link>
+        <nuxt-link to="/contact" class="l-contact-btn">Contact</nuxt-link>
+      </c-link>
+    </section>
   </section>
 </template>
 
 <script>
+import Heading from "@/components/BaseModule/Heading.vue";
+import CLink from "@/components/BaseModule/CommonLink.vue";
 import KeyVisual from "@/components/index/TheKeyVisual.vue";
 import Intro from "@/components/index/TheIntroduction.vue";
 import Skill from "@/components/index/TheSkillList.vue";
 export default {
   layout: "IndexLayout",
   components: {
+    Heading,
+    CLink,
     KeyVisual,
     Intro,
     Skill,
@@ -76,5 +86,9 @@ export default {
 .l-skill {
   max-width: 800px;
   margin: auto;
+}
+
+.l-contact-btn {
+  width: 80%;
 }
 </style>

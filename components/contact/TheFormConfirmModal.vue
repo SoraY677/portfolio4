@@ -73,9 +73,9 @@ export default {
       const GOOGLE_FORM_ACTION =
         "https://docs.google.com/forms/u/0/d/e/1FAIpQLScNaX1t1grG6uIi5qG2pfnpFBf0fGr4S5HtUFESlPiu1xw1Yw/formResponse";
       const params = new FormData();
-      params.append("entry.2145197953", this.name);
-      params.append("entry.663343677", this.mailadress);
-      params.append("entry.1396251703", this.content);
+      params.append("entry.2145197953", this.content.name);
+      params.append("entry.663343677", this.content.mailadress);
+      params.append("entry.1396251703", this.content.content);
       await this.$axios.$post(CORS_PROXY + GOOGLE_FORM_ACTION, params);
       this.$emit("change", false);
       this.isConfirm = true;
