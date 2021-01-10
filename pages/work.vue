@@ -1,11 +1,12 @@
 <template>
   <section>
+    <swipe-suggest></swipe-suggest>
     <work-list :workList="workList"></work-list>
   </section>
 </template>
 
 <script>
-import MyHeader from "@/components/TheHeader.vue";
+import SwipeSuggest from "@/components/BaseModule/SwipeSuggest.vue";
 import WorkList from "@/components/work/TheWorkList.vue";
 export default {
   data() {
@@ -88,7 +89,7 @@ export default {
     };
   },
   components: {
-    MyHeader,
+    SwipeSuggest,
     WorkList,
   },
 };

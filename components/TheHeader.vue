@@ -4,7 +4,7 @@
       <square-block :isCircle="true">
         <div class="circle-container">
           <h1 class="text-title-font text-bg-color">
-            {{ $route.name }}
+            {{ getName }}
           </h1>
         </div>
       </square-block>
@@ -17,6 +17,15 @@ import SquareBlock from "@/components/BaseModule/SquareBlock";
 export default {
   components: {
     SquareBlock,
+  },
+  computed: {
+    getName() {
+      let routeName = this.$route.name;
+      if (routeName.length != 0)
+        routeName =
+          routeName[0].toUpperCase() + routeName.slice(1, routeName.length);
+      return routeName;
+    },
   },
 };
 </script>
