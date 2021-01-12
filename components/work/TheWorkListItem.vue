@@ -30,8 +30,9 @@
       <img
         :src="work.img.path"
         :alt="work.img.altName"
-        width="640"
-        height="300"
+        width="676"
+        height="353"
+        v-lazy-load
       />
     </div>
   </section>
@@ -125,5 +126,6 @@ export default {
 
 img {
   height: 100%;
+  width: 100%;
 }
 </style>
