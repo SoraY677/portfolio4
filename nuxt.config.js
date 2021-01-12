@@ -59,7 +59,8 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    'nuxt-lazy-load'
   ],
   /*
    ** vuetify module configuration
