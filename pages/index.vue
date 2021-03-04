@@ -30,12 +30,12 @@ export default {
   data() {
     return {
       linkList: [
-        {
-          name: "twitter",
-          url: "https://twitter.com/TenYDGB",
-          path: "/link/twitter.svg",
-          altName: "Twitterアイコン",
-        },
+        // {
+        //   name: "twitter",
+        //   url: "https://twitter.com/TenYDGB",
+        //   path: "/link/twitter.svg",
+        //   altName: "Twitterアイコン",
+        // },
         {
           name: "Github",
           url: "https://github.com/SoraY677",
